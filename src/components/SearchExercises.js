@@ -1,5 +1,4 @@
-import { Stack, Typography } from '@mui/material';
-import { Box } from '@mui/system';
+import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 
 const SearchExercises = () => {
@@ -13,7 +12,34 @@ const SearchExercises = () => {
         Awesome Exercises <br />
         you should know
       </Typography>
-      <Box></Box>
+      <Box position='relative' mb='72px'>
+        <TextField
+          sx={{
+            input: { fontWeight: '700', border: 'none', borderRadius: '4px' },
+            width: { lg: '800px', xs: '350px' },
+            backgroundColor: '#fff',
+            borderRadius: '40px',
+          }}
+          height='76px'
+          value=''
+          onChange={(e) => {}}
+          placeholder='Search for exercises'
+          type='text'
+        />
+        <Button
+          sx={{
+            bgcolor: '#ff2625',
+            color: '#fff',
+            textTransform: 'none',
+            width: { lg: '175px', xs: '80px' },
+            fontSize: { lg: '20px', xs: '14px' },
+            height: '56px',
+            position: 'absolute',
+          }}
+          className='search-btn'>
+          Search
+        </Button>
+      </Box>
     </Stack>
   );
 };

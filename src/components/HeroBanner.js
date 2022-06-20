@@ -28,7 +28,7 @@ function HeroBanner() {
         Explore Exercises
       </Button>
       <Typography
-        fontSize='200px'
+        fontSize='180px'
         fontWeight='600'
         color='#ff2625'
         sx={{ opacity: '0.1', lg: 'block', xs: 'none' }}>
