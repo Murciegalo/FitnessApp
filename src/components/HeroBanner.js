@@ -28,6 +28,7 @@ function HeroBanner() {
         Explore Exercises
       </Button>
       <Typography
+        className='hero-banner-bigText'
         fontSize='180px'
         fontWeight='600'
         color='#ff2625'
