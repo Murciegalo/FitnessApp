@@ -10,7 +10,6 @@ const HorizontalItem = ({ el }) => {
       justifyContent='center'
       className='bodyPart-card'
       sx={{
-        // borderTop: category === el ? '4px solid #ff2625' : '',
         backgroundColor: '#fff',
         borderBottomLeftRadius: '20px',
         width: '270px',
@@ -18,9 +17,11 @@ const HorizontalItem = ({ el }) => {
         cursor: 'pointer',
         gap: '40px',
       }}
-      // onClick={() => setCategory([el])}
-    >
+      onClick={() =>
+        window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' })
+      }>
       <img
+        className='bodyPart-img'
         src={Icon}
         alt='dumbbell'
         style={{ width: '40px', height: '40px' }}

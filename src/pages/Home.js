@@ -16,9 +16,9 @@ function Home() {
         setCategory={setCategory}
       />
       <Exercises
+        exercises={exercises}
         setExercises={setExercises}
         category={category}
-        setCategory={setCategory}
       />
     </Box>
   );
