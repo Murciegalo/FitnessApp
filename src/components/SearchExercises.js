@@ -3,10 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { fetchData, exercisesOptions } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
 
-const SearchExercises = () => {
+const SearchExercises = ({
+  category,
+  setCategory,
+  exercises,
+  setExercises,
+}) => {
   const [search, setSearch] = useState('');
-  const [exercises, setExercises] = useState([]);
-  const [category, setCategory] = useState([]);
 
   useEffect(() => {
     const fetchCategories = async () => {
