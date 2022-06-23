@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack, Typography } from '@mui/material';
 import Icon from '../assets/icons/gym.png';
 
-const HorizontalItem = ({ el, category, setCategory }) => {
+const HorizontalItem = ({ el }) => {
   return (
     <Stack
       type='button'
@@ -10,7 +10,7 @@ const HorizontalItem = ({ el, category, setCategory }) => {
       justifyContent='center'
       className='bodyPart-card'
       sx={{
-        borderTop: category === el ? '4px solid #ff2625' : '',
+        // borderTop: category === el ? '4px solid #ff2625' : '',
         backgroundColor: '#fff',
         borderBottomLeftRadius: '20px',
         width: '270px',
@@ -18,7 +18,8 @@ const HorizontalItem = ({ el, category, setCategory }) => {
         cursor: 'pointer',
         gap: '40px',
       }}
-      onClick={() => setCategory([el])}>
+      // onClick={() => setCategory([el])}
+    >
       <img
         src={Icon}
         alt='dumbbell'
