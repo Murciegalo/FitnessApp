@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack, Typography } from '@mui/material';
 import Icon from '../assets/icons/gym.png';
 
-const HorizontalItem = ({ el }) => {
+const HorizontalItem = ({ el, setCategory }) => {
   return (
     <Stack
       type='button'
@@ -17,9 +17,10 @@ const HorizontalItem = ({ el }) => {
         cursor: 'pointer',
         gap: '40px',
       }}
-      onClick={() =>
-        window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' })
-      }>
+      onClick={() => {
+        setCategory(el);
+        window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
+      }}>
       <img
         className='bodyPart-img'
         src={Icon}
