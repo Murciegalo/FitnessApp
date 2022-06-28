@@ -11,7 +11,6 @@ const SearchExercises = ({ category, setCategory, setExercises }) => {
         'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
         exercisesOptions
       );
-      console.log('Categories', categData);
       setCategory(categData);
     };
     fetchCategories();
