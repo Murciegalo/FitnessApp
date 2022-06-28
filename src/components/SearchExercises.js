@@ -3,14 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { fetchData, exercisesOptions } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
 
-const SearchExercises = ({
-  category,
-  setCategory,
-  exercises,
-  setExercises,
-}) => {
+const SearchExercises = ({ category, setCategory, setExercises }) => {
   const [search, setSearch] = useState('');
-
   useEffect(() => {
     const fetchCategories = async () => {
       const categData = await fetchData(
@@ -58,6 +52,7 @@ const SearchExercises = ({
             borderRadius: '40px',
           }}
           height='76px'
+          value={search}
           onChange={(e) => {
             setSearch(e.target.value.toLowerCase());
           }}

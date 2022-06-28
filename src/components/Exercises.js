@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import ExerciseCard from './ExerciseCard';
 
 function Exercises({ exercises, setExercises, category }) {
+  console.log('Data', exercises);
   const [currentPg, setCurrentPg] = useState(1);
   const exercisesPerPg = 9;
   const paginate = (e, value) => {

@@ -33,6 +33,8 @@ function ExerciseCard({ el }) {
       <Typography
         ml='21px'
         color='#000'
+        width='300px'
+        textAlign='center'
         fontWeight='bold'
         mt='11px'
         pb='10px'
