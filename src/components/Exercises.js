@@ -19,7 +19,7 @@ function Exercises({ exercises, setExercises, category }) {
   useEffect(() => {
     const fetchExercisesByCategory = async () => {
       let data = [];
-      if (category === 'all') {
+      if (category.length === 0) {
         data = await fetchData(
           'https://exercisedb.p.rapidapi.com/exercises',
           exercisesOptions

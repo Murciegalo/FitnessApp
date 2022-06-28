@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import HorizontalItem from './HorizontalItem';
 
-const HorizontalScrollbar = ({ data, category, setCategory }) => {
-  const [displayCategories, setDisplayCategories] = useState(data);
+const HorizontalScrollbar = ({ category, setCategory }) => {
+  const [displayCategories, setDisplayCategories] = useState(category);
   return (
     <ScrollMenu>
       {displayCategories !== null &&

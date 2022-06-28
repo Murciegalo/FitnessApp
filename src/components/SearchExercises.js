@@ -11,6 +11,7 @@ const SearchExercises = ({ category, setCategory, setExercises }) => {
         'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
         exercisesOptions
       );
+      console.log('Categories', categData);
       setCategory(categData);
     };
     fetchCategories();
@@ -76,11 +77,9 @@ const SearchExercises = ({ category, setCategory, setExercises }) => {
         </Button>
       </Box>
       <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
-        <HorizontalScrollbar
-          data={category}
-          category={category}
-          setCategory={setCategory}
-        />
+        {category.length > 1 && (
+          <HorizontalScrollbar category={category} setCategory={setCategory} />
+        )}
       </Box>
     </Stack>
   );
