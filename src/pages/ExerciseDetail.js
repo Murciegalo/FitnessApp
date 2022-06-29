@@ -7,11 +7,16 @@ import ExerciseVideos from '../components/ExerciseVideos';
 import SimilarExercises from '../components/SimilarExercises';
 
 const ExerciseDetail = () => {
+  const [exerciseDetail, setExerciseDetail] = useState(null);
   const { id } = useParams();
-  const [exerciseDetail, setExerciseDetail] = useState({});
   useEffect(() => {
-    console.log(process.env.REACT_APP_EXERCISE_DB_URL);
-    const fetchExercisesData = async () => {};
+    const fetchExercisesData = async () => {
+      const exerciseDetails = await fetchData(
+        `${process.env.REACT_APP_EXERCISE_DB_URL}/exercises/${id}`,
+        exercisesOptions
+      );
+      setExerciseDetail(exerciseDetails);
+    };
     fetchExercisesData();
   }, [id]);
 
