@@ -33,6 +33,11 @@ function ExerciseVideos({ exerciseVideos, name }) {
               alt={el.video.title}
               style={{ borderRadius: '15px' }}
             />
+            <Box textAlign='center'>
+              <Typography variant='h7' color='#000'>
+                {el.video.title}
+              </Typography>
+            </Box>
           </a>
         ))}
       </Stack>
