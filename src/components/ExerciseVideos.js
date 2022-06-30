@@ -14,21 +14,25 @@ function ExerciseVideos({ exerciseVideos, name }) {
         exercise videos
       </Typography>
       <Stack
-        justifyContent='flex-start'
+        justifyContent='center'
         flexWrap='wrap'
         alignItems='center'
         sx={{
-          flexDirection: { lg: 'row' },
-          gap: { lg: '110px', xs: '0' },
+          flexDirection: 'row',
+          gap: '60px',
         }}>
-        {exerciseVideos?.slice(0, 3).map((el, I) => (
+        {exerciseVideos?.slice(0, 6).map((el, I) => (
           <a
             key={I}
             className='exercise-video'
             href={`https://www.youtube.com/watch?v=${el.video.videoId}`}
             target='_blank'
             rel='noreferrer'>
-            {/* <img src={el.video.thubmnails[0].url} alt={el.video.title} /> */}
+            <img
+              src={el.video.thumbnails[0].url}
+              alt={el.video.title}
+              style={{ borderRadius: '15px' }}
+            />
           </a>
         ))}
       </Stack>
