@@ -32,8 +32,8 @@ function Detail({ exerciseDetail }) {
           target your {target}. It will help you improve your mood and gain
           energy.
         </Typography>
-        {extraDetail.map((el) => (
-          <Stack key={el.name} direction='row' gap='24px' alignItems='center'>
+        {extraDetail.map((el, I) => (
+          <Stack key={I} direction='row' gap='24px' alignItems='center'>
             <Button
               sx={{
                 background: '#fff2db',
@@ -47,7 +47,7 @@ function Detail({ exerciseDetail }) {
                 style={{ width: '50px', height: '50px' }}
               />
             </Button>
-            <Typography textTransform='capitalize' variant='h5'>
+            <Typography key={el.name} textTransform='capitalize' variant='h5'>
               {el.name}
             </Typography>
           </Stack>
