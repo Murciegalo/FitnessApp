@@ -1,7 +1,7 @@
 export const exercisesOptions = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '7ccc7ad061msh9af215b66942226p1a2d52jsn8000fd34b0ff',
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API,
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
   },
 };
@@ -14,6 +14,14 @@ export const fetchData = async (url, options) => {
   } catch (err) {
     console.log(err);
   }
+};
+
+export const youtubeOptions = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API,
+    'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com',
+  },
 };
 
 // CUSTOM ARROWS FUNCTIONALITY FOR HORIZONTAL SCROLLBAR
